@@ -2,15 +2,17 @@
 using namespace std;
 
 int main() {
-    int a, b, c;
-    cout << "Enter three integers: ";
-    cin >> a >> b >> c;
-
-    if (a == b && b == c) {
-        cout << "Equal" << endl;
-    } else {
-        cout << "Not equal" << endl;
+    float GPA;
+    
+    cout << "Enter student's GPA: ";
+    cin >> GPA;
+    
+    if (GPA >= 3.5) {
+        cout << "Eligible for engineering scholarship" << endl;
     }
-
+    else {
+        cout << "Not eligible for engineering scholarship" << endl;
+    }
+    
     return 0;
 }

@@ -2,12 +2,21 @@
 using namespace std;
 
 int main() {
-    int num1, num2;
-    cout << "Enter two integers: ";
-    cin >> num1 >> num2;
+    float V;
 
-    int max_val = (num1 > num2) ? num1 : num2;
+    cout << "===== Battery Voltage Monitoring =====" << endl;
+    cout << "Enter voltage readings. Stops when < 12 V" << endl << endl;
 
-    cout << "The larger number is: " << max_val << endl;
+    cout << "Enter battery voltage reading in V: ";
+    cin >> V;
+
+    while(V >= 12) {
+        cout << "Voltage OK: " << V << " V" << endl;
+        cout << "Enter next voltage reading in V: ";
+        cin >> V;
+    }
+
+    cout << "Battery voltage low. Recharge required." << endl;
+
     return 0;
 }
